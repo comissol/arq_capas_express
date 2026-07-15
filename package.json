@@ -1,0 +1,26 @@
+{
+  "name": "ejercitacion-arquitectura-backend",
+  "version": "1.0.0",
+  "description": "En este proyecto, desarrollarás una API RESTful utilizando **Express** y **MongoDB** que permitirá realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una colección de perros. La aplicación tomará como base el archivo `dogs.json`, que contiene detalles de perros, como su nombre, raza, y edad. Tu objetivo es modelar y manipular esta información mediante una API que siga las prácticas de desarrollo vistas en clase.",
+  "homepage": "https://github.com/diplomaturabackend-untref/Ejercitacion-Arquitectura-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/diplomaturabackend-untref/Ejercitacion-Arquitectura-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diplomaturabackend-untref/Ejercitacion-Arquitectura-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Lucila Comisso",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node ==watch ==env=file .env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4"
+  }
+}

@@ -1,5 +1,5 @@
 // @/models.js
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const DogSchema = new mongoose.Schema({
   name: {
@@ -23,4 +23,4 @@ const DogSchema = new mongoose.Schema({
 
 const Dog = mongoose.model('Dog', DogSchema)
 
-module.exports = { Dog }
+export default Dog
