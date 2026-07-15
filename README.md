@@ -261,3 +261,4 @@ El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un mode
 
 Este proyecto te permitirá aplicar los conceptos clave de desarrollo backend con Express y Mongoose, además de gestionar datos en MongoDB. ¡Recuerda mantener tu código organizado y bien documentado!
 "# arq_capas_express" 
+"# arq_capas_express" 
