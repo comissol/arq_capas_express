@@ -10,11 +10,11 @@ export function notFoundHandler(req,res,next) {
 
 export function globalHandler (err, req,res,next) {
     //caso de uso: formato de _id válido CastError
-    if (error.name === "CastError") {
+    if (err.name === "CastError") {
         return res.status(400).json({message: err.name})
     }
     //caso de uso: error de validación de mongoose ValidationError
-    if (error.name === "ValidationError") {
+    if (err.name === "ValidationError") {
         return res.status(400).json({message: err.name})
     }
     const status = err.status || 500;

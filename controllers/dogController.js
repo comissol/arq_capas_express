@@ -1,9 +1,11 @@
-import Dog from '../models/dog.js'
+import Dog from '../models/dog.js';
+import { createError } from '../middlewares/errorHandler.js';
 
 export async function getAllDogs(req,res, next){
-    try {const allDogs = await Dog.find();
-        if (!allDogs.lenght){
-            throw createError ({status: 404, message: 'No hay perror en la base de datos'}) // ver?
+    try {
+        const allDogs = await Dog.find();
+        if (!allDogs.length){
+            throw createError ({status: 404, message: 'No hay perros en la base de datos'}) // ver?
         }
     return res.status(200).json(allDogs)
 } catch (error) {
@@ -30,7 +32,7 @@ export async function createDog (req,res, next) {
         }
         const newDog = new Dog(req.body);
         const insertedDog = await newDog.save();   
-        return res.status(201).json(insertedDog);
+        return res.status(201).json({"mensaje": "Perro agregado exitosamente", "perro": insertedDog});
     } catch (error) {
         next(error);
     }
@@ -40,23 +42,16 @@ export async function updateDog(req, res, next) {
     try {
         const { id } = req.params;
         const updatedDog = await Dog.findByIdAndUpdate(id, req.body, { 
-            new: true,
+            returnDocument: 'after',
             runValidators: true});
         if (!updatedDog) {
             return res.status(404).json({ message: "Perro no encontrado" });
         }
-        return res.status(200).json(updatedDog);
+        return res.status(200).json({"mensaje": "Perro actualizado exitosamente", "perro":updatedDog});
     } catch (error) {
         next(error);
     }
 }
-
-export async function deletedDog (req,res, next){
-    const { id } = req.params
-    const deletedDog = await Dog.findByIdAndDelete(id)
-    return res.status(200).json(deletedDog)
-}
-
 
 export async function deletedDog(req, res, next) {
     try {

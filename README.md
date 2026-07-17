@@ -67,7 +67,7 @@ A continuación se detallan los endpoints disponibles en la API para gestionar l
 - **Respuesta de Error (Código `500 Internal Server Error`):**
   ```json
   {
-    "mensaje": "Error al obtener los perros"
+    "mensaje": "No hay perros en la base de datos"
   }
   ```
 </details>
@@ -134,7 +134,7 @@ A continuación se detallan los endpoints disponibles en la API para gestionar l
 - **Respuesta de Error (Código `400 Bad Request`):**
   ```json
   {
-    "mensaje": "Los datos proporcionados son inválidos."
+    "mensaje": "El cuerpo de la solicitud no puede estar vacío"
   }
   ```
 </details>
@@ -191,13 +191,20 @@ A continuación se detallan los endpoints disponibles en la API para gestionar l
 - **Respuesta Exitosa (Código `200 OK`):**
   ```json
   {
-    "mensaje": "Perro eliminado exitosamente"
+    "message": "Perro eliminado correctamente"
+    {
+      "_id": "60d5ec49f72e9e2f3c6e9b1a",
+      "name": "Max",
+      "breed": "Labrador Retriever",
+      "age": 4,
+      "isGoodBoy": false
+    }
   }
   ```
 - **Respuesta de Error (Código `404 Not Found`):**
   ```json
   {
-    "mensaje": "Perro no encontrado"
+    "mensaje": "Perro no encontrado, no se pudo eliminar" 
   }
   ```
 </details>
