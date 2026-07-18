@@ -20,12 +20,11 @@ Antes de iniciar la aplicación, se configuraron las variables de entorno para l
 1.  **Se creó el archivo `.env`**.
 2.  **Se añadieron las variables correspondientes**:
     ```
-    DB_PROTOCOL=mongodb+srv
+    DB_PROTOCOL=mongodb
     DB_HOST=<tu_cluster_host>
     DB_USER=<tu_usuario>
     DB_PASS=<tu_contraseña>
-    DB_NAME=<tu_nombre_de_db>
-    DB_OPTIONS=retryWrites=true&w=majority
+    DB_NAME=<tu_nom<options>
     ```
 El archivo `config/database.js` es el encargado de leer estas variables y establecer la conexión con la base de datos utilizando Mongoose.
 
