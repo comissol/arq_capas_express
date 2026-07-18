@@ -237,6 +237,10 @@ El archivo `dogs.json` incluye propiedades de cada perro. Se creó un modelo en 
   - dog.js
 /routes/
   - dogRoutes.js
+/middlewares/
+  - errorHandler.js
+/docs/
+  - openApi.js
 ```
 ### Descripción de Archivos 📝
 - **/json**: Contiene el archivo dogs.json con los datos de los perros.
@@ -246,6 +250,7 @@ El archivo `dogs.json` incluye propiedades de cada perro. Se creó un modelo en 
 - **/models/**: Contiene el modelo de datos `Dog` para MongoDB.
 - **/routes/**: Define las rutas de los endpoints del CRUD.
 - **/controllers/**: Define los controladores de los endpoints del CRUD.
+- **/openApi.js/**: Especificación de la API en formato OpenAPI; utilizada para generar la interfaz de Swagger y documentar los endpoints. 
 
 ## Conclusión 🎉
 Este proyecto permitie aplicar los conceptos clave de desarrollo backend con Express y Mongoose, además de gestionar datos en MongoDB. 
