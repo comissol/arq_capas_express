@@ -4,10 +4,13 @@ import connectDB from './config/database.js'
 import dogRouter from './routes/dogRoutes.js'
 import Dog from './models/dog.js'
 import { notFoundHandler, globalHandler } from './middlewares/errorHandler.js';
+import swaggerUi from 'swagger-ui-express'
+import { docApi } from './docs/openApi.js'
 
 const app = express()
 app.use(express.json())
 app.use("/api/perros", dogRouter)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(docApi))
 app.use(notFoundHandler)
 app.use(globalHandler)
 
