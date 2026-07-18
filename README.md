@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto 📋
 
-En este proyecto, desarrollarás una API RESTful utilizando **Express** y **MongoDB** que permitirá realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una colección de perros. La aplicación tomará como base el archivo `dogs.json`, que contiene detalles de perros, como su nombre, raza, y edad. Tu objetivo es modelar y manipular esta información mediante una API que siga las prácticas de desarrollo vistas en clase.
+En este proyecto, se desarrolla una API RESTful utilizando **Express** y **MongoDB** que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una colección de perros. La aplicación toma como base el archivo `dogs.json`, que contiene detalles de perros, como su nombre, raza, y edad. El objetivo es modelar y manipular esta información mediante una API que sigue las prácticas de desarrollo vistas en clase.
 
 > **Instrucciones:** Al finalizar, deberás completar este README.md con una documentación detallada de los endpoints de tu API. Asegúrate de incluir para cada endpoint:
 > - Método HTTP (GET, POST, PUT, DELETE).
@@ -16,11 +16,9 @@ En este proyecto, desarrollarás una API RESTful utilizando **Express** y **Mong
 
 ## Configuración del Entorno ⚙️
 
-Antes de iniciar la aplicación, es necesario configurar las variables de entorno para la conexión con la base de datos MongoDB.
-
-1.  **Crear el archivo `.env`**: En la raíz del proyecto, crea un archivo llamado `.env`.
-2.  **Añadir las variables**: Completa el archivo `.env` con los siguientes datos, reemplazando los valores con tus credenciales de MongoDB:
-
+Antes de iniciar la aplicación, se configuraron las variables de entorno para la conexión con la base de datos MongoDB.
+1.  **Se creó el archivo `.env`**.
+2.  **Se añadieron las variables correspondientes**:
     ```
     DB_PROTOCOL=mongodb+srv
     DB_HOST=<tu_cluster_host>
@@ -29,15 +27,11 @@ Antes de iniciar la aplicación, es necesario configurar las variables de entorn
     DB_NAME=<tu_nombre_de_db>
     DB_OPTIONS=retryWrites=true&w=majority
     ```
-
 El archivo `config/database.js` es el encargado de leer estas variables y establecer la conexión con la base de datos utilizando Mongoose.
 
 ## Documentación de la API 📖
-
 A continuación se detallan los endpoints disponibles en la API para gestionar los perros.
-
 ---
-
 <details>
 <summary><strong>1. Obtener todos los perros</strong></summary>
 
@@ -149,6 +143,7 @@ A continuación se detallan los endpoints disponibles en la API para gestionar l
 - **Descripción:** Modifica los datos de un perro existente, identificado por su ID.
 - **Parámetros de Ruta:**
   - `{id}` (obligatorio): El ID del perro a actualizar.
+  **Ejemplo de Solicitud:** `GET http://localhost:3000/api/perros/60d5ec49f72e9e2f3c6e9b1a`
 - **Cuerpo de la Solicitud (Ejemplo):**
   ```json
   {
@@ -209,19 +204,11 @@ A continuación se detallan los endpoints disponibles en la API para gestionar l
   ```
 </details>
 
-## Entrega 📌
-
-Deberás diseñar y desarrollar una API backend que maneje la información de perros almacenada en MongoDB. Además, se espera que documentes los endpoints creados en el archivo README.md.
-
 ## Dataset Proporcionado 📂
-
-- **dogs.json**: Contiene detalles de perros, incluyendo `name`, `breed`, `age`, y `isGoodBoy`. Este archivo será la referencia para el modelo de datos de MongoDB.
-
-> **Instrucción:** Deberás importar este archivo `dogs.json` a tu base de datos en MongoDB Atlas. Sigue el procedimiento visto en clase para crear una nueva colección (por ejemplo, `dogs`) y cargar los datos desde el archivo JSON.
+- **dogs.json**: Contiene detalles de perros, incluyendo `name`, `breed`, `age`, y `isGoodBoy`. 
 
 ## Modelo de Base de Datos 📊
-
-El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un modelo en Mongoose llamado `Dog`, con al menos los siguientes campos:
+El archivo `dogs.json` incluye propiedades de cada perro. Se creó un modelo en Mongoose llamado `Dog`, con los siguientes campos:
 
 - **name**: Nombre del perro (por ejemplo, "Max", "Buddy").
 - **breed**: Raza del perro (por ejemplo, "Labrador Retriever").
@@ -229,7 +216,6 @@ El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un mode
 - **isGoodBoy**: Valor booleano que indica si es un buen chico.
 
 ## Funcionalidades del CRUD 🚀
-
 1. **Obtener todos los perros**
 2. **Obtener un perro por ID**
 3. **Agregar un nuevo perro**
@@ -238,7 +224,6 @@ El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un mode
 6. **Control de Errores**
 
 ## Estructura del Repositorio 🗂️
-
 ```plaintext
 /controllers
   - dogController.js
@@ -253,9 +238,7 @@ El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un mode
 /routes/
   - dogRoutes.js
 ```
-
 ### Descripción de Archivos 📝
-
 - **/json**: Contiene el archivo dogs.json con los datos de los perros.
 - **/README.md**: Archivo con la descripción del proyecto y pasos para ejecutarlo.
 - **/app.js**: Archivo principal de la aplicación Express.
@@ -265,7 +248,4 @@ El archivo `dogs.json` incluye propiedades de cada perro. Deberás crear un mode
 - **/controllers/**: Define los controladores de los endpoints del CRUD.
 
 ## Conclusión 🎉
-
-Este proyecto te permitirá aplicar los conceptos clave de desarrollo backend con Express y Mongoose, además de gestionar datos en MongoDB. ¡Recuerda mantener tu código organizado y bien documentado!
-"# arq_capas_express" 
-"# arq_capas_express" 
+Este proyecto permitie aplicar los conceptos clave de desarrollo backend con Express y Mongoose, además de gestionar datos en MongoDB. 

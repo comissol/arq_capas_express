@@ -5,7 +5,7 @@ export async function getAllDogs(req,res, next){
     try {
         const allDogs = await Dog.find();
         if (!allDogs.length){
-            throw createError ({status: 404, message: 'No hay perros en la base de datos'}) // ver?
+            throw createError ({status: 404, message: 'No hay perros en la base de datos'})
         }
     return res.status(200).json(allDogs)
 } catch (error) {
